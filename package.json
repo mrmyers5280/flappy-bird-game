@@ -1,0 +1,30 @@
+{
+  "name": "flappy-bird-game",
+  "version": "1.0.0",
+  "description": "flappy bird game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrmyers5280/flappy-bird-game.git"
+  },
+  "author": "Mike Myers",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrmyers5280/flappy-bird-game/issues"
+  },
+  "homepage": "https://github.com/mrmyers5280/flappy-bird-game#readme",
+  "devDependencies": {
+    "browserify": "^12.0.0",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "^2.2.0",
+    "gulp-jshint": "^1.11.2",
+    "gulp-minify-html": "^1.0.4",
+    "gulp-uglify": "^1.4.2",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}
