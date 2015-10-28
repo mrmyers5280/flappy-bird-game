@@ -7,10 +7,8 @@ var GraphicsSystem = function(entities) {
 };
 
 GraphicsSystem.prototype.run = function() {
-	// Tick the graphics system a few times to see it in action
-	for (var i = 0; i < 5; i++) {
-		this.tick();
-	}
+	// Run the render loop
+	window.requestAnimationFrame(this.tick.bind(this));
 };
 
 GraphicsSystem.prototype.tick = function() {
@@ -32,6 +30,8 @@ GraphicsSystem.prototype.tick = function() {
 		}
 		entity.components.graphics.draw(this.context);
 	}
+	// Continue the render loop
+	window.requestAnimationFrame(this.tick.bind(this));
 };
 
 exports.GraphicsSystem = GraphicsSystem;
