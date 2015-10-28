@@ -1,5 +1,9 @@
 var GraphicsSystem = function(entities) {
 	this.entities = entities;
+	// Canvas is where we draw
+	this.canvas = document.getElementById('main-canvas');
+	// Canvas is what we draw to
+	this.context = this.canvas.getContext('2d');
 };
 
 GraphicsSystem.prototype.run = function() {
