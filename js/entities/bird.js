@@ -5,7 +5,7 @@ var Bird = function() {
 	// console.log("Creating Bird Entity");
 	var physics = new physicsComponent.PhysicsComponent(this);
 	physics.position.y = 0.5;
-	physics.acceleration.y = -2;
+	physics.acceleration.y = -2;	// How strong gravity is
 
 	var graphics = new graphicsComponent.BirdGraphicsComponent(this);
 
