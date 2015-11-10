@@ -1,4 +1,4 @@
-var CircleCollisionComponent = function(entity, size) {
+var RectCollisionComponent = function(entity, size) {
 	this.entity = entity;
 	this.size = size;
 	this.type = 'rect';
