@@ -19,7 +19,24 @@ RectCollisionComponent.prototype.collideCircle = function(entity) {
 };
 
 RectCollisionComponent.prototype.collideRect = function(entity) {
-	return false;
+	var positionA = this.entity.components.physics.position;
+	var positionB = entity.components.physics.position;
+
+	var sizeA = this.size;
+	var sizeB = entity.components.collision.size;
+
+	var leftA = positionA.x - sizeA.x / 2;
+	var rightA = positionA.x + sizeA.x / 2;
+	var bottomA = positionA.y - sizeA.y / 2;
+	var topA = positionA.y + sizeA.y / 2;
+
+	var leftB = positionB.x - sizeB.x / 2;
+	var rightB = positionB.x + sizeB.x / 2;
+	var bottomB = positionB.y - sizeB.y / 2;
+	var topB = positionB.y + sizeB.y / 2;
+
+	return !(leftA > rightB || leftB > rightA ||
+			bottomA > topB || bottomB > topA);
 };
 
 exports.RectCollisionComponent = RectCollisionComponent;
