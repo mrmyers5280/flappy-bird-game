@@ -23,4 +23,11 @@ PhysicsComponent.prototype.update = function(delta) {
 	this.position.y += this.velocity.y * delta;
 };
 
+PhysicsComponent.prototype.reset = function() {
+	// Reset bird to starting point
+	this.position.y = 0.5;
+	this.velocity.y = 0;
+	this.acceleration.y = 0;
+};
+
 exports.PhysicsComponent = PhysicsComponent;
