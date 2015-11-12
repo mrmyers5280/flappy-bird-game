@@ -24,7 +24,7 @@ Bird.prototype.onCollision = function(entity) {
 	console.log("Bird collided with entity: ", entity);
 	// Reset bird to middle (x=0, y=0.5)
 	var physics = new physicsComponent.PhysicsComponent(this);
-	this.components.physics.reset();
+	this.components.physics.resetBird();
 };
 
 exports.Bird = Bird;
