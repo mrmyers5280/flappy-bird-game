@@ -1,7 +1,7 @@
 var graphicsComponent = require("../components/graphics/pipe");
 var physicsComponent = require("../components/physics/physics");
 var collisionComponent = require("../components/collision/rect");
-var settings = require("../settings");
+// var settings = require("../settings");
 
 var Pipe = function(position) {
 	// console.log("Creating Pipe entity");

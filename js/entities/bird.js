@@ -1,7 +1,7 @@
 var graphicsComponent = require("../components/graphics/bird");
 var physicsComponent = require("../components/physics/physics");
 var collisionComponent = require("../components/collision/circle");
-var settings = require("../settings");
+// var settings = require("../settings");
 
 var Bird = function() {
 	// console.log("Creating Bird Entity");
