@@ -46,10 +46,10 @@ CircleCollisionComponent.prototype.collideRect = function(entity) {
 	var sizeB = entity.components.collision.size;
 
 	var closest = {
-		x: clamp(positionA.x, positionB.x - sizeB.x / 2,
-				positionB.x + sizeB.x / 2),
-		y: clamp(positionA.y, positionB.y - sizeB.y / 2,
-				positionB.y + sizeB.y / 2)
+		x: clamp(positionA.x, positionB.x,
+				positionB.x + sizeB.x),
+		y: clamp(positionA.y, positionB.y,
+				positionB.y + sizeB.y)
 	};
 
 	var radiusA = this.radius;
@@ -58,7 +58,7 @@ CircleCollisionComponent.prototype.collideRect = function(entity) {
 				y: positionA.y - closest.y};
 
 	var distanceSquared = diff.x * diff.x + diff.y * diff.y;
-	return distanceSquared < radiusA * radiusA;
+	return distanceSquared < radiusA * radiusA;    // has there been a collision
 };
 
 exports.CircleCollisionComponent = CircleCollisionComponent;
