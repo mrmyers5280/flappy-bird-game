@@ -31,7 +31,7 @@ CollisionSystem.prototype.tick = function() {
 			}
 
 			if (entityA instanceof bird.Bird || entityB instanceof bird.Bird) {
-				this.removePipes()
+				this.removePipes();
 			}
 		}
 	}
