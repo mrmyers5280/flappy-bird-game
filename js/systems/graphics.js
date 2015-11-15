@@ -1,5 +1,5 @@
 var GraphicsSystem = function(entities) {
-	this.entities = entities;
+	this.entities = entities;	// [Bird, Pipe, Pipe]
 	// Canvas is where we draw
 	this.canvas = document.getElementById('main-canvas');
 	// Canvas is what we draw to

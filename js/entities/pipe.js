@@ -3,7 +3,7 @@ var physicsComponent = require("../components/physics/physics");
 var collisionComponent = require("../components/collision/rect");
 // var settings = require("../settings");
 
-var Pipe = function(position) {
+var Pipe = function(position) {	// position comes from flappy_bird entities array
 	// console.log("Creating Pipe entity");
 	var physics = new physicsComponent.PhysicsComponent(this);
 	physics.position.x = position.x;
