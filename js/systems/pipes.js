@@ -6,7 +6,7 @@ var PipesSystem = function(entities) {
 
 PipesSystem.prototype.run = function() {
 	// Run the update loop
-	window.setInterval(this.tick.bind(this), 2000);
+	window.setInterval(this.tick.bind(this), 4000);
 };
 
 PipesSystem.prototype.tick = function() {
