@@ -11,7 +11,7 @@ var Pipe = function(position) {	// position comes from flappy_bird entities arra
 	physics.velocity.x = -0.1;	// move the pipes towards the bird
 
 	var graphics = new graphicsComponent.PipeGraphicsComponent(this);
-	var collision = new collisionComponent.RectCollisionComponent(this, {x: 0.1, y: 0.4});
+	var collision = new collisionComponent.RectCollisionComponent(this, {x: 0.1, y: 0.4});	// coordinates are the size of each pipe
 	collision.onCollision = this.onCollision.bind(this);
 
 	this.components = {
