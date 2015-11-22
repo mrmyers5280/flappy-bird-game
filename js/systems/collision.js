@@ -1,5 +1,6 @@
 var pipe = require('../entities/pipe');
 var bird = require('../entities/bird');
+var edge = require('../entities/edge');
 
 var CollisionSystem = function(entities) {
 	this.entities = entities;
@@ -33,6 +34,14 @@ CollisionSystem.prototype.tick = function() {
 			if (entityA instanceof bird.Bird || entityB instanceof bird.Bird) {
 				this.removePipes();
 			}
+
+			if (entityA instanceof edge.Edge) {
+				this.removeEntity(entityB);
+			}
+
+			if (entityB instanceof edge.Edge) {
+				this.removeEntity(entityA);
+			}
 		}
 	}
 };
@@ -43,9 +52,15 @@ CollisionSystem.prototype.removePipes = function(context) {
 	for (var i = 0; i < entitiesCopy.length; i++) {
 		if (entitiesCopy[i] instanceof pipe.Pipe) {
 			// Remove the pipe from the array
-			this.entities.splice(this.entities.indexOf(entitiesCopy[i]), 1);
+			this.removeEntity(entitiesCopy[i]);
 		}
 	}
+};
+
+CollisionSystem.prototype.removeEntity = function(entity) {
+	// Remove the first two pipes from the array
+	console.log('In removeEntity');
+	this.entities.splice(this.entities.indexOf(entity), 1);
 };
 
 exports.CollisionSystem = CollisionSystem;
